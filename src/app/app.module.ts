@@ -9,6 +9,7 @@ import {HttpClientModule} from '@angular/common/http'
 
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api'
 import {DataService} from './data.service'
+import {SharedModule} from './shared/shared.module'
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import {DataService} from './data.service'
     AppRoutingModule,
     HttpClientModule,
     CoreModule,
+    SharedModule,
     HttpClientInMemoryWebApiModule.forRoot(DataService),
   ],
   providers: [],

@@ -1,0 +1,21 @@
+<div
+  class="container"
+  tabindex="-1"
+  id="demo"
+  [ngClass]="{
+    'offcanvas offcanvas-start offcanvas-custom text-white': screen_width < 992,
+    visible: screen_width > 992
+  }"
+>
+  <ul class="main-nav nav navbar-nav d-flex flex-column flex-lg-row">
+    <li
+      class="py-3 pe-3 expand"
+      *ngFor="let item of Nav_items | keyvalue; let i = index"
+      [class.text-danger]="selected === i"
+      (click)="setIndex(i)"
+      data-bs-dismiss="offcanvas"
+    >
+      <a href="#">{{ item.value }}</a>
+    </li>
+  </ul>
+</div>

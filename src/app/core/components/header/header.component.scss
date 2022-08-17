@@ -3,3 +3,81 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.header-links li i {
+  color: #d10024;
+  margin-right: 5px;
+}
+
+.header-links li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 12px;
+}
+
+#header {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #15161d;
+}
+
+.input-select {
+  padding: 0px 15px;
+  background: #fff;
+  border: 1px solid #e4e7ed;
+  height: 40px;
+}
+
+.header-search form .input-select {
+  margin-right: -4px;
+  border-radius: 40px 0px 0px 40px;
+}
+.header-search form .input {
+  width: calc(100% - 260px);
+  margin-right: -4px;
+}
+
+.input {
+  height: 40px;
+  padding: 0px 15px;
+  border: 1px solid #e4e7ed;
+  background-color: #fff;
+  width: 100%;
+}
+
+.header-search {
+  padding: 15px 0px;
+}
+
+form {
+  display: flex;
+}
+
+.header-search form .search-btn {
+  height: 40px;
+  width: 100px;
+  background: #d10024;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  border-radius: 0px 40px 40px 0px;
+}
+
+.header-stn div a {
+  display: grid;
+  text-align: center;
+  span {
+    font-size: 12px;
+  }
+}
+
+.header-stn > div > a > .qty {
+  position: relative;
+  right: -43px;
+  top: -48px;
+  font-size: 10px;
+  border-radius: 50%;
+  background-color: #d10024;
+  width: 20px;
+  height: 20px;
+}

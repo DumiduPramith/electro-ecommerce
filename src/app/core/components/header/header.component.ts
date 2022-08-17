@@ -14,11 +14,14 @@ export class HeaderComponent implements OnInit {
   email = ''
   address = ''
   currency = ''
+  categories = {}
   ngOnInit() {
     this.headerService.getTopHeader().subscribe((data: TopHeader) => {
       this.phone = data.phone
       this.email = data.email
       this.address = data.address
+      this.currency = data.currency
+      this.categories = data.categories
     })
   }
 }
