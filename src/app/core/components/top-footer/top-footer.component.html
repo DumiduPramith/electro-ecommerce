@@ -1,13 +1,58 @@
 <div class="section">
   <div class="container">
     <div class="row">
-      <div class="col-md-3 col-xs-6">
+      <div class="col-sm-6 col-xs-12 col-lg-3">
         <div class="footer">
-          <h3 class="footer-titile">About Us</h3>
+          <h3 class="footer-title">About Us</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto
-            corrupti minima esse laborum consequuntur, atque,
+            corrupti
           </p>
+          <ul class="footer-links">
+            <li>
+              <a href="#"> <i class="fa fa-map-marker"></i>{{ address }} </a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-phone"></i> {{ phone }}</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope"></i>{{ email }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xs-12 col-lg-3">
+        <div class="footer">
+          <h3 class="footer-title">Categories</h3>
+          <ul class="footer-links">
+            <li *ngFor="let item of navbar | limiter | keyvalue">
+              <a href="">{{ item.value }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-lg-3">
+        <div class="footer">
+          <h3 class="footer-title">Information</h3>
+          <ul class="footer-links">
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Orders and Returns</a></li>
+            <li><a href="">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xs-12 col-lg-3">
+        <div class="footer">
+          <h3 class="footer-title">Service</h3>
+          <ul class="footer-links">
+            <li><a href="">My Account</a></li>
+            <li><a href="">View Cart</a></li>
+            <li><a href="">Wishlist</a></li>
+            <li><a href="">Track My Order</a></li>
+            <li><a href="">Help</a></li>
+          </ul>
         </div>
       </div>
     </div>

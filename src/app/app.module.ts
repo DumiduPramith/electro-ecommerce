@@ -10,6 +10,9 @@ import {HttpClientModule} from '@angular/common/http'
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api'
 import {DataService} from './data.service'
 import {SharedModule} from './shared/shared.module'
+import {StoreDevtoolsModule} from '@ngrx/store-devtools'
+import {StoreModule} from '@ngrx/store'
+import {EffectsModule} from '@ngrx/effects'
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +23,12 @@ import {SharedModule} from './shared/shared.module'
     CoreModule,
     SharedModule,
     HttpClientInMemoryWebApiModule.forRoot(DataService),
+    StoreModule.forRoot({}),
+    EffectsModule.forRoot(),
+    StoreDevtoolsModule.instrument({
+      maxAge: 25,
+      logOnly: environment.production,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

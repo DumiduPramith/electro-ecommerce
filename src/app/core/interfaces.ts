@@ -6,6 +6,9 @@ export interface TopHeader {
   categories: {
     [key: number]: string
   }
+  navbar: {
+    [key: number]: string
+  }
 }
 
 export interface NavBar {

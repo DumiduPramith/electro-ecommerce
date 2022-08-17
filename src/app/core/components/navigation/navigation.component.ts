@@ -1,5 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core'
-import {NavigationService} from '../../services/navigation.service'
+import {Store} from '@ngrx/store'
+import {selectHeader} from '../../store/core.selector'
 
 @Component({
   selector: 'app-navigation',
@@ -10,11 +11,12 @@ export class NavigationComponent implements OnInit {
   Nav_items = {}
   selected: number = 0
   screen_width = 0
-  constructor(private NavService: NavigationService) {}
+
+  constructor(private store: Store) {}
 
   ngOnInit(): void {
-    this.NavService.getNavbar().subscribe((data) => {
-      this.Nav_items = data
+    this.store.select(selectHeader).subscribe((data) => {
+      this.Nav_items = data.navbar
     })
 
     this.screen_width = window.innerWidth
