@@ -1,18 +1,12 @@
 import {Component, Input, OnInit} from '@angular/core'
 
-interface props {
-  name: string
-  image: string
-}
-
 @Component({
-  selector: 'app-collection-card',
+  selector: 'app-collection',
   templateUrl: './collection.component.html',
   styleUrls: ['./collection.component.scss'],
 })
-export class CollectionCardComponent implements OnInit {
-  @Input() props: props = {name: '', image: ''}
-
+export class CollectionComponent implements OnInit {
+  @Input() collectionData: {[key: string]: string} | undefined = {}
   constructor() {}
 
   ngOnInit(): void {}

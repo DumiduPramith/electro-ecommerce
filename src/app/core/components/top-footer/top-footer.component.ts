@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core'
 import {Store} from '@ngrx/store'
-import {selectHeader} from '../../store/core.selector'
+import {selectHeader} from '../../store/selectors/core.selector'
 
 @Component({
   selector: 'app-top-footer',

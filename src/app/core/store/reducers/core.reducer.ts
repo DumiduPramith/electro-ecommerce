@@ -1,6 +1,19 @@
 import {createReducer, on} from '@ngrx/store'
-import {TopHeader} from '../interfaces'
-import {headerFetchAPISuccess} from './core.actions'
+
+import {headerFetchAPISuccess} from '../actions/core.actions'
+
+export interface TopHeader {
+  phone: number
+  email: string
+  address: string
+  currency: string
+  categories: {
+    [key: number]: string
+  }
+  navbar: {
+    [key: number]: string
+  }
+}
 
 export const initialState: TopHeader = {
   phone: 0,

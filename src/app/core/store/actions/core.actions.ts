@@ -1,5 +1,5 @@
 import {createAction, props} from '@ngrx/store'
-import {TopHeader} from '../interfaces'
+import {TopHeader} from '../../interfaces'
 
 export const invokeHeaderAPI = createAction(
   '[Header API] invoke header fetch api'

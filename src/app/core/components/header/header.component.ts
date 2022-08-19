@@ -1,9 +1,7 @@
 import {Component, OnInit} from '@angular/core'
 import {select, Store} from '@ngrx/store'
-import {TopHeader} from '../../interfaces'
-import {HeaderService} from '../../services/header.service'
-import {invokeHeaderAPI} from '../../store/core.actions'
-import {selectHeader} from '../../store/core.selector'
+import {invokeHeaderAPI} from '../../store/actions/core.actions'
+import {selectHeader} from '../../store/selectors/core.selector'
 
 @Component({
   selector: 'app-header',
@@ -11,7 +9,7 @@ import {selectHeader} from '../../store/core.selector'
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor(private headerService: HeaderService, private store: Store) {}
+  constructor(private store: Store) {}
 
   phone = 0
   email = ''

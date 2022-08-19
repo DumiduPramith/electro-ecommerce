@@ -7,11 +7,13 @@ import {NavigationComponent} from './components/navigation/navigation.component'
 import {FooterComponent} from './components/footer/footer.component'
 import {TopFooterComponent} from './components/top-footer/top-footer.component'
 import {StoreModule} from '@ngrx/store'
-import {headerReducer} from './store/core.reducer'
+import {headerReducer} from './store/reducers/core.reducer'
 import {EffectsModule} from '@ngrx/effects'
-import {CoreEffects} from './store/core.effects'
-import {LimiterPipe} from './pipes/footer/limiter.pipe';
-import { HomeComponent } from './components/home/home.component'
+import {CoreEffects} from './store/effects/core.effects'
+import {LimiterPipe} from './pipes/footer/limiter.pipe'
+import {SharedModule} from '../shared/shared.module'
+import {SectionsModule} from '../sections/sections.module'
+import {HomeModule} from './home/home.module'
 
 @NgModule({
   declarations: [
@@ -22,10 +24,11 @@ import { HomeComponent } from './components/home/home.component'
     FooterComponent,
     TopFooterComponent,
     LimiterPipe,
-    HomeComponent,
   ],
   imports: [
     CommonModule,
+    SharedModule,
+    SectionsModule,
     StoreModule.forFeature('top-header', headerReducer),
     EffectsModule.forFeature([CoreEffects]),
   ],

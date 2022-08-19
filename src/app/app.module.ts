@@ -9,7 +9,6 @@ import {HttpClientModule} from '@angular/common/http'
 
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api'
 import {DataService} from './data.service'
-import {SharedModule} from './shared/shared.module'
 import {StoreDevtoolsModule} from '@ngrx/store-devtools'
 import {StoreModule} from '@ngrx/store'
 import {EffectsModule} from '@ngrx/effects'
@@ -21,7 +20,6 @@ import {EffectsModule} from '@ngrx/effects'
     AppRoutingModule,
     HttpClientModule,
     CoreModule,
-    SharedModule,
     HttpClientInMemoryWebApiModule.forRoot(DataService),
     StoreModule.forRoot({}),
     EffectsModule.forRoot(),
