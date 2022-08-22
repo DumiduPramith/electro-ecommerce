@@ -1,0 +1,54 @@
+<div class="">
+  <div
+    [class.slide]="hover"
+    (mouseover)="hover = true"
+    (mouseout)="hover = false"
+  >
+    <div class="product-img d-flex justify-content-center">
+      <img [src]="product_data.product_img" />
+    </div>
+    <div class="product-body text-center">
+      <p class="product-category text-uppercase">{{ product_data.category }}</p>
+      <h3 class="product-name text-uppercase">
+        <a href="">{{ product_data.product_name }}</a>
+      </h3>
+      <h4 class="product-price">
+        ${{ product_data.product_price }}
+        <del
+          class="product-old-price"
+          [class.invisible]="!product_data.old_price"
+          >${{ product_data.old_price }}</del
+        >
+      </h4>
+      <div class="product-ratings">
+        <i
+          class="fa fa-star"
+          [class.invisible]="!product_data.stars"
+          *ngFor="let star of [].constructor(product_data.stars)"
+        ></i>
+      </div>
+      <div class="product-btns">
+        <button class="add-to-wishlist">
+          <i class="fa fa-heart"></i>
+          <span class="tooltip-a">add to wishlist</span>
+        </button>
+        <button class="add-to-compare">
+          <i class="fa fa-exchange"></i>
+          <span class="tooltip-a">add to compare</span>
+        </button>
+        <button class="quick-view" tabindex="-1">
+          <i class="fa fa-eye"></i>
+          <span class="tooltip-a">quick view</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="add-to-cart"
+    [class.animation]="hover"
+    (mouseover)="hover = true"
+    (mouseout)="hover = false"
+  >
+    <app-add-cart></app-add-cart>
+  </div>
+</div>

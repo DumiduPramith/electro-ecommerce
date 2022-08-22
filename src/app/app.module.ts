@@ -1,17 +1,18 @@
 import {environment} from './../environments/environment'
-import {CoreModule} from './core/core.module'
 import {NgModule} from '@angular/core'
 import {BrowserModule} from '@angular/platform-browser'
 
 import {AppRoutingModule} from './app-routing.module'
 import {AppComponent} from './app.component'
 import {HttpClientModule} from '@angular/common/http'
-
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api'
 import {DataService} from './data.service'
 import {StoreDevtoolsModule} from '@ngrx/store-devtools'
 import {StoreModule} from '@ngrx/store'
 import {EffectsModule} from '@ngrx/effects'
+
+// for carouselModule
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,7 @@ import {EffectsModule} from '@ngrx/effects'
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CoreModule,
+    BrowserAnimationsModule,
     HttpClientInMemoryWebApiModule.forRoot(DataService),
     StoreModule.forRoot({}),
     EffectsModule.forRoot(),

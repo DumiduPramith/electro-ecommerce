@@ -1,0 +1,29 @@
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="section-title d-md-flex justify-content-between">
+        <h3 class="title text-uppercase">{{ section_name }}</h3>
+
+        <ul class="section-tab-nav tab-nav d-flex flex-wrap">
+          <li class="expand"><a href="">Laptops</a></li>
+          <li class="expand"><a href="">Laptops</a></li>
+          <li class="expand"><a href="">Laptops</a></li>
+          <li class="expand"><a href="">Laptops</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let card of products | keyvalue">
+            <ng-template carouselSlide>
+              <div class="margin-right">
+                <app-product-card
+                  [product_data]="card.value"
+                ></app-product-card>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</div>

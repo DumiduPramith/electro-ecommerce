@@ -1,0 +1,25 @@
+.section-title {
+  margin: 15px 0px 30px;
+}
+
+.owl-prev,
+.owl-next {
+  border-radius: 50%;
+  border: none;
+  font-size: 14px;
+  color: #2b2d42;
+  margin: 0px 2px;
+  transition: 0.2s all;
+}
+
+.owl-next:hover {
+  background-color: #d10024;
+  border-color: #d10024;
+  color: #fff;
+}
+
+.owl-prev:hover {
+  background-color: #d10024;
+  border-color: #d10024;
+  color: #fff;
+}

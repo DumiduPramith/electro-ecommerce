@@ -1,5 +1,7 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -15,6 +17,7 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+  font-size: 14px;
 }
 
 a:hover {
@@ -22,4 +25,27 @@ a:hover {
 }
 .modal-backdrop {
   z-index: -1 !important;
+}
+
+.section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
 }

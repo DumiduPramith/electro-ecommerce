@@ -1,0 +1,17 @@
+<app-collection
+  *ngIf="rawServiceData.collection"
+  [collectionData]="rawServiceData.collection_items"
+></app-collection>
+<app-product-carousel
+  *ngIf="rawServiceData.new_products && rawServiceData.new_product_items"
+  [section_name]="'new products'"
+  [products]="rawServiceData.new_product_items"
+></app-product-carousel>
+<app-hot-deals></app-hot-deals>
+<app-product-carousel
+  *ngIf="rawServiceData.new_products && rawServiceData.new_product_items"
+  [section_name]="'top selling'"
+  [products]="rawServiceData.new_product_items"
+></app-product-carousel>
+<app-top-selling-footer></app-top-selling-footer>
+<app-newsletter></app-newsletter>

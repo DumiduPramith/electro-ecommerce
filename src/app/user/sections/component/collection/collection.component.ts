@@ -1,0 +1,13 @@
+import {Component, Input, OnInit} from '@angular/core'
+
+@Component({
+  selector: 'app-collection',
+  templateUrl: './collection.component.html',
+  styleUrls: ['./collection.component.scss'],
+})
+export class CollectionSection implements OnInit {
+  @Input() collectionData: {[key: string]: string} | undefined = {}
+  constructor() {}
+
+  ngOnInit(): void {}
+}

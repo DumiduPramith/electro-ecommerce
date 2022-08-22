@@ -1,0 +1,26 @@
+<div class="section-title d-flex justify-content-between">
+  <h4 class="title text-uppercase">{{ section_name }}</h4>
+  <div class="section-nav">
+    <button class="owl-prev" (click)="owlCar.prev()"><</button>
+    <button class="owl-next" (click)="owlCar.next()">></button>
+  </div>
+</div>
+<owl-carousel-o [options]="customOptions" #owlCar>
+  <ng-container>
+    <ng-template carouselSlide>
+      <app-small-product-card></app-small-product-card>
+      <app-small-product-card></app-small-product-card>
+      <app-small-product-card></app-small-product-card>
+    </ng-template>
+    <ng-template carouselSlide>
+      <app-small-product-card></app-small-product-card>
+      <app-small-product-card></app-small-product-card>
+      <app-small-product-card></app-small-product-card>
+    </ng-template>
+    <ng-template carouselSlide>
+      <app-small-product-card></app-small-product-card>
+      <app-small-product-card></app-small-product-card>
+      <app-small-product-card></app-small-product-card>
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>
