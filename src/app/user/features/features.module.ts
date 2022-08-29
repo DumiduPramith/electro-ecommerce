@@ -1,13 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { AboutComponent } from './component/about/about.component';
-import { ContactComponent } from './component/contact/contact.component';
-import { PrivacyComponent } from './component/privacy/privacy.component';
-import { ReturnsComponent } from './component/returns/returns.component';
-import { TermsComponent } from './component/terms/terms.component';
-import { HelpComponent } from './component/help/help.component';
-
-
+import {NgModule} from '@angular/core'
+import {CommonModule} from '@angular/common'
+import {AboutComponent} from './components/about/about.component'
+import {ContactComponent} from './components/contact/contact.component'
+import {PrivacyComponent} from './components/privacy/privacy.component'
+import {ReturnsComponent} from './components/returns/returns.component'
+import {TermsComponent} from './components/terms/terms.component'
+import {HelpComponent} from './components/help/help.component'
 
 @NgModule({
   declarations: [
@@ -16,10 +14,8 @@ import { HelpComponent } from './component/help/help.component';
     PrivacyComponent,
     ReturnsComponent,
     TermsComponent,
-    HelpComponent
+    HelpComponent,
   ],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule],
 })
-export class FeaturesModule { }
+export class FeaturesModule {}

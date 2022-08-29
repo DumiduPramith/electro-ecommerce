@@ -1,0 +1,28 @@
+<ng-container *ngFor="let image of images; let index = index">
+  <app-ngx-image-zoom
+    [hidden]="!(activeImg === index)"
+    [thumbImage]="image"
+    [magnification]="1.5"
+  >
+  </app-ngx-image-zoom>
+</ng-container>
+
+<owl-carousel-o
+  [options]="customOptions"
+  (translated)="getData($event)"
+  #owlCar
+>
+  <ng-template
+    carouselSlide
+    *ngFor="let image of images; let index = index"
+    [id]="setId(index)"
+  >
+    <div
+      class="image"
+      [class.mid]="activeImg === index"
+      (click)="changeImg(index)"
+    >
+      <img [src]="image" alt="" class="product-preview-img" />
+    </div>
+  </ng-template>
+</owl-carousel-o>

@@ -7,7 +7,7 @@ import {CardItemInterface} from 'src/app/user/shared/shared.interface'
   templateUrl: './product-carousel.component.html',
   styleUrls: ['./product-carousel.component.scss'],
 })
-export class ProductCarouselSection implements OnInit {
+export class ProductCarouselSectionComponent implements OnInit {
   @Input() products: {[key: number]: CardItemInterface} = {}
   @Input() section_name: string = 'section'
 

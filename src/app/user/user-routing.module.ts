@@ -12,6 +12,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('./core/home/home.module').then((m) => m.HomeModule),
       },
+      {
+        path: 'product',
+        loadComponent: () =>
+          import('./shared/standalone/product/product.component').then(
+            (mod) => mod.ProductComponent
+          ),
+      },
     ],
   },
 ]
