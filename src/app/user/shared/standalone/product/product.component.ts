@@ -11,6 +11,10 @@ import {SharedModule} from '../../shared.module'
 })
 export class ProductComponent implements OnInit {
   constructor() {}
-
+  selectedTab = 3
   ngOnInit(): void {}
+
+  setTab(id: number) {
+    this.selectedTab = id
+  }
 }

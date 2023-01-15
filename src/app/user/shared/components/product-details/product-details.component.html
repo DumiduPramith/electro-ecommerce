@@ -1,6 +1,6 @@
 <div class="product-details">
   <h2 class="product-name">{{ product.productName }}</h2>
-  <div>
+  <div class="d-flex">
     <div class="product-rating">
       <i class="fa fa-star" [class.invisible]="product.productRating < 1"></i>
       <i class="fa fa-star" [class.invisible]="product.productRating < 2"></i>
@@ -8,9 +8,9 @@
       <i class="fa fa-star" [class.invisible]="product.productRating < 4"></i>
       <i class="fa fa-star" [class.invisible]="product.productRating < 5"></i>
     </div>
-    <a href="" class="review-link">{{ product.productReviews }} Reviews</a>
+    <a href="" class="review-link">{{ product.productReviews }} Review(s)</a>
   </div>
-  <div>
+  <div class="d-flex align-items-baseline">
     <h3 class="product-price">
       ${{ product.productPrice }}
       <del class="product-old-price" *ngIf="product.productOldPrice"
@@ -21,10 +21,10 @@
       *ngIf="product.productAvailable; then instock; else outstock"
     ></ng-container>
     <ng-template #instock>
-      <span class="product-available">in stock</span>
+      <span class="stock product-available">in stock</span>
     </ng-template>
     <ng-template #outstock>
-      <span class="product-available">out of stock</span>
+      <span class="stock product-available">out of stock</span>
     </ng-template>
   </div>
 
@@ -42,19 +42,16 @@
     </label>
   </div>
 
-  <div class="add-to-cart">
-    <div class="qty-label">
-      QTY
-      <div class="input-number">
-        <input type="number" />
-        <span class="qty-up">+</span>
-        <span class="qty-down">-</span>
-      </div>
-
-      <app-add-cart></app-add-cart>
+  <div class="qty-label d-flex align-items-baseline">
+    QTY
+    <div class="input-number">
+      <input type="number" />
     </div>
+
+    <app-add-cart></app-add-cart>
   </div>
-  <ul class="product-btns">
+
+  <ul class="product-btns d-flex flex-wrap">
     <li>
       <a href="">
         <app-add-wishlist></app-add-wishlist>
@@ -68,13 +65,13 @@
       </a>
     </li>
   </ul>
-  <ul class="product-links">
+  <ul class="product-links d-flex flex-wrap">
     <li>Category:</li>
     <li *ngFor="let category of product.productCategory | keyvalue">
-      {{ category.value.categoryName }}<a href=""></a>
+      <a href="">{{ category.value.categoryName }}</a>
     </li>
   </ul>
-  <ul class="product-links">
+  <ul class="product-links d-flex flex-wrap">
     <li>Share:</li>
     <li>
       <a href=""><i class="fa-brands fa-facebook-f"></i></a>

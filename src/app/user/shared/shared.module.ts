@@ -16,6 +16,8 @@ import {ProductTabComponent} from './components/product-tab/product-tab.componen
 import {AddWishlistComponent} from './components/product/add-wishlist/add-wishlist.component'
 import {AddCompareComponent} from './components/product/add-compare/add-compare.component'
 import {AddCartComponent} from './components/product/add-cart/add-cart.component'
+import {ReviewPaginationComponent} from './components/review-pagination/review-pagination.component'
+import {ReviewsComponent} from './components/reviews/reviews.component'
 
 @NgModule({
   declarations: [
@@ -33,6 +35,9 @@ import {AddCartComponent} from './components/product/add-cart/add-cart.component
     ProductTabComponent,
     AddWishlistComponent,
     AddCompareComponent,
+
+    ReviewPaginationComponent,
+    ReviewsComponent,
   ],
   imports: [CommonModule, CarouselModule],
   exports: [
@@ -42,6 +47,8 @@ import {AddCartComponent} from './components/product/add-cart/add-cart.component
     BreadcrumbComponent,
     GalleryCarouselComponent,
     ProductDetailsComponent,
+    ReviewsComponent,
+    ReviewPaginationComponent,
   ],
 })
 export class SharedModule {}

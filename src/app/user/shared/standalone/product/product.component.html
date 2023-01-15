@@ -2,12 +2,54 @@
   <div class="container">
     <app-breadcrumb [breadcrumb]="['test', 'test1']"></app-breadcrumb>
 
-    <div class="row">
-      <div>
+    <div class="row d-flex align-items-lg-center">
+      <div class="col-lg-6">
         <app-gallery-carousel></app-gallery-carousel>
       </div>
-      <div>
+      <div class="col-lg-6">
         <app-product-details></app-product-details>
+      </div>
+
+      <div class="section-tab">
+        <ul class="tab-nav">
+          <li class="expand" [class.active]="selectedTab === 1">
+            <a (click)="setTab(1)">Description</a>
+          </li>
+          <li class="expand" [class.active]="selectedTab === 2">
+            <a (click)="setTab(2)">Details</a>
+          </li>
+          <li class="expand" [class.active]="selectedTab === 3">
+            <a (click)="setTab(3)">Reviews (2)</a>
+          </li>
+        </ul>
+
+        <div class="tab-content" [ngSwitch]="selectedTab">
+          <ng-template [ngSwitchCase]="1">
+            <div id="tab1" class="fade in">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                ea commodi, aspernatur id molestias mollitia voluptatum rerum
+                aut ipsa porro sapiente nulla iusto esse, quas provident eaque
+                eum asperiores quod!
+              </p>
+            </div>
+          </ng-template>
+          <ng-template [ngSwitchCase]="2">
+            <div id="tab2" class="fade in">
+              <p>
+                ea commodi, aspernatur id molestias mollitia voluptatum rerum
+                aut ipsa porro sapiente nulla iusto esse, quas provident eaque
+                eum asperiores quod!
+              </p>
+            </div>
+          </ng-template>
+          <ng-template [ngSwitchCase]="3">
+            <app-reviews></app-reviews>
+            <app-review-pagination
+              *ngFor="let index of [].constructor(3)"
+            ></app-review-pagination>
+          </ng-template>
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,30 @@
+p {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+.reviews {
+  margin-bottom: 30px;
+}
+.review-heading {
+  width: 130px;
+  flex-shrink: 0;
+}
+.review-heading .name {
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.review-heading .date {
+  color: #8d99ae;
+  font-size: 10px;
+  margin: 0;
+}
+
+.review-rating {
+  margin-top: 5px;
+  color: #d10024;
+}

@@ -1,0 +1,55 @@
+.section-tab {
+  margin-top: 30px;
+}
+
+.expand {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+}
+.expand:after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px #d73444;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  transform-origin: 100% 50%;
+}
+.expand:hover:after {
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+}
+
+.tab-nav {
+  text-align: center;
+  padding: 15px 0px;
+  margin-bottom: 30px;
+}
+
+.tab-nav li {
+  padding: 0px 15px;
+}
+
+.tab-nav li a {
+  font-weight: 700;
+}
+
+.active {
+  border-bottom: solid 3px #d73444;
+}
+
+.fade.in {
+  opacity: 1;
+}
+
+.fade {
+  transition: opacity 0.15s linear;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+.expand a {
+  cursor: pointer;
+}

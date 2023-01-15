@@ -1,0 +1,22 @@
+<div id="rating" class="d-flex flex-column align-items-center">
+  <div class="rating-avg d-flex">
+    <span>4.5</span>
+    <div class="rating-stars">
+      <i class="fa fa-star" *ngFor="let count of ratingStar(4.5)"></i>
+    </div>
+  </div>
+
+  <div class="rating d-table">
+    <div class="d-table-row" *ngFor="let count of numberArray">
+      <div class="rating-stars d-table-cell">
+        <i class="fa fa-star" *ngFor="let star of [].constructor(count)"></i>
+      </div>
+      <div class="d-table-cell">
+        <div class="rating-progress">
+          <div style="width: 80%"></div>
+        </div>
+      </div>
+      <span class="sum d-table-cell">3</span>
+    </div>
+  </div>
+</div>
