@@ -19,6 +19,13 @@ const routes: Routes = [
             (mod) => mod.ProductComponent
           ),
       },
+      {
+        path: 'search',
+        loadComponent: () =>
+          import('./features/components/search/search.component').then(
+            (mod) => mod.SearchComponent
+          ),
+      },
     ],
   },
 ]

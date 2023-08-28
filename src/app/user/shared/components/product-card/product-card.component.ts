@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core'
 import {CardItemInterface} from '../../shared.interface'
+import {cardDefault} from '../../defaultData/card.default'
 
 @Component({
   selector: 'app-product-card',
@@ -7,12 +8,7 @@ import {CardItemInterface} from '../../shared.interface'
   styleUrls: ['./product-card.component.scss'],
 })
 export class ProductCardComponent implements OnInit {
-  @Input() product_data: CardItemInterface = {
-    product_img: '',
-    category: '',
-    product_name: '',
-    product_price: 0,
-  }
+  @Input() product_data: CardItemInterface = cardDefault
 
   constructor() {}
 

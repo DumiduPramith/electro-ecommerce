@@ -18,6 +18,8 @@ import {AddCompareComponent} from './components/product/add-compare/add-compare.
 import {AddCartComponent} from './components/product/add-cart/add-cart.component'
 import {ReviewPaginationComponent} from './components/review-pagination/review-pagination.component'
 import {ReviewsComponent} from './components/reviews/reviews.component'
+import {TickFilterComponent} from './components/tick-filter/tick-filter.component'
+import {PriceFilterComponent} from './components/price-filter/price-filter.component'
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import {ReviewsComponent} from './components/reviews/reviews.component'
 
     ReviewPaginationComponent,
     ReviewsComponent,
+    TickFilterComponent,
+    PriceFilterComponent,
   ],
   imports: [CommonModule, CarouselModule],
   exports: [
@@ -49,6 +53,8 @@ import {ReviewsComponent} from './components/reviews/reviews.component'
     ProductDetailsComponent,
     ReviewsComponent,
     ReviewPaginationComponent,
+    TickFilterComponent,
+    PriceFilterComponent,
   ],
 })
 export class SharedModule {}
