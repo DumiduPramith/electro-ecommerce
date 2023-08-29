@@ -1,0 +1,26 @@
+<div class="container d-flex flex-column">
+  <div class="d-flex flex-column">
+    <h5 class="text-uppercase">categories</h5>
+    <ng-container *ngFor="let item of searchCategories | keyvalue">
+      <app-tick-filter
+        class="mt-2"
+        [categoryName]="item.key"
+        [categoryItems]="item.value"
+      ></app-tick-filter>
+    </ng-container>
+  </div>
+  <div class="d-flex flex-column mt-4">
+    <h5 class="text-uppercase">price</h5>
+    <app-price-filter></app-price-filter>
+  </div>
+  <div class="d-flex flex-column mt-4">
+    <h5 class="text-uppercase">brand</h5>
+    <ng-container *ngFor="let item of filterBrand | keyvalue">
+      <app-tick-filter
+        class="mt-2"
+        [categoryName]="item.key"
+        [categoryItems]="item.value"
+      ></app-tick-filter>
+    </ng-container>
+  </div>
+</div>

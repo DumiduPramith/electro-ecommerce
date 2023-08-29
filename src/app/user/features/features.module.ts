@@ -6,6 +6,10 @@ import {PrivacyComponent} from './components/privacy/privacy.component'
 import {ReturnsComponent} from './components/returns/returns.component'
 import {TermsComponent} from './components/terms/terms.component'
 import {HelpComponent} from './components/help/help.component'
+import {SortByComponent} from './components/sort-by/sort-by.component'
+import {PageShowLimitComponent} from './components/page-show-limit/page-show-limit.component'
+import {FilterComponent} from './components/filter/filter.component'
+import {SharedModule} from '../shared/shared.module'
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import {HelpComponent} from './components/help/help.component'
     ReturnsComponent,
     TermsComponent,
     HelpComponent,
+    SortByComponent,
+    PageShowLimitComponent,
+    FilterComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, SharedModule],
+  exports: [FilterComponent, SortByComponent, PageShowLimitComponent],
 })
 export class FeaturesModule {}

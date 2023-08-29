@@ -6,8 +6,8 @@ import {Component, Input, OnInit} from '@angular/core'
   styleUrls: ['./tick-filter.component.scss'],
 })
 export class TickFilterComponent implements OnInit {
-  @Input() categoryName: string = ''
-  @Input() categoryItems: number = 0
+  @Input({required: true}) categoryName: string = ''
+  @Input({required: true}) categoryItems: number = 0
 
   constructor() {}
 

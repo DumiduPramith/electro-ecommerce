@@ -1,0 +1,8 @@
+<label>
+  SORT BY:
+  <select class="input-select">
+    <ng-container *ngFor="let option of options | keyvalue">
+      <option value="option.key">{{ option.value }}</option>
+    </ng-container>
+  </select>
+</label>

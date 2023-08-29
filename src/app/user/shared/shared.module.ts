@@ -7,7 +7,9 @@ import {ProductCardComponent} from './components/product-card/product-card.compo
 import {SmallProductCardComponent} from './components/small-product-card/small-product-card.component'
 import {SCardSectionComponent} from './components/s-card-section/s-card-section.component'
 import {BreadcrumbComponent} from './components/breadcrumb/breadcrumb.component'
+
 import {CarouselModule} from 'ngx-owl-carousel-o'
+import {MatSliderModule} from '@angular/material/slider'
 
 import {GalleryCarouselComponent} from './components/gallery-carousel/gallery-carousel.component'
 import {NgxImageZoomComponent} from './components/ngx-image-zoom/ngx-image-zoom.component'
@@ -43,7 +45,7 @@ import {PriceFilterComponent} from './components/price-filter/price-filter.compo
     TickFilterComponent,
     PriceFilterComponent,
   ],
-  imports: [CommonModule, CarouselModule],
+  imports: [CommonModule, CarouselModule, MatSliderModule],
   exports: [
     CollectionCardComponent,
     ProductCardComponent,

@@ -8,7 +8,7 @@ import {cardDefault} from '../../defaultData/card.default'
   styleUrls: ['./product-card.component.scss'],
 })
 export class ProductCardComponent implements OnInit {
-  @Input() product_data: CardItemInterface = cardDefault
+  @Input({required: true}) product_data: CardItemInterface = cardDefault
 
   constructor() {}
 

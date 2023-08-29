@@ -1,6 +1,27 @@
-<div class="container d-flex">
-  <div class="d-flex flex-column">
-    <h3 class="text-uppercase">categories</h3>
-    <app-tick-filter></app-tick-filter>
+<div class="row container mb-5">
+  <app-filter class="col-md-3"></app-filter>
+  <div class="col-md-9">
+    <div class="d-flex">
+      <app-sort-by [options]="options"></app-sort-by>
+      <app-page-show-limit [limit]="limit"></app-page-show-limit>
+    </div>
+    <div id="product-list" class="row">
+      <app-product-card
+        class="col-sm-12 col-md-6 col-xl-4"
+        [product_data]="data"
+      ></app-product-card>
+      <app-product-card
+        class="col-sm-12 col-md-6 col-xl-4"
+        [product_data]="data"
+      ></app-product-card>
+      <app-product-card
+        class="col-sm-12 col-md-6 col-xl-4"
+        [product_data]="data"
+      ></app-product-card>
+      <app-product-card
+        class="col-sm-12 col-md-6 col-xl-4"
+        [product_data]="data"
+      ></app-product-card>
+    </div>
   </div>
 </div>
