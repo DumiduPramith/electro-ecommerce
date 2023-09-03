@@ -26,6 +26,13 @@ const routes: Routes = [
             (mod) => mod.SearchComponent
           ),
       },
+      {
+        path: 'checkout',
+        loadChildren: () =>
+          import('./features/checkout/checkout.module').then(
+            (m) => m.CheckoutModule
+          ),
+      },
     ],
   },
 ]

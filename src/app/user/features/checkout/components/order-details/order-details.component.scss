@@ -1,0 +1,40 @@
+.section-title {
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.title {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.order-summary {
+  margin: 15px 0px;
+}
+
+.order-col {
+  display: table;
+  width: 100%;
+}
+
+.order-summary .order-col > div:first-child {
+  width: calc(100% - 150px);
+}
+
+.order-col > div:last-child {
+  width: 150px;
+  text-align: right;
+}
+
+.order-col > div {
+  display: table-cell;
+  padding: 10px 0px;
+}
+
+.order-total {
+  font-size: 24px;
+  color: #d10024;
+}

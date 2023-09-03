@@ -1,0 +1,16 @@
+.input-radio {
+  position: relative;
+  display: block;
+}
+
+.input-radio label {
+  font-weight: 500;
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+label {
+  display: inline-block;
+}

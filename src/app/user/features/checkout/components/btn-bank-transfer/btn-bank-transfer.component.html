@@ -1,0 +1,18 @@
+<div class="input-radio">
+  <input
+    type="radio"
+    name="payment"
+    id="payment-1"
+    (change)="onCheckedChange($event)"
+    (click)="show()"
+  />
+  <label for="payment-1"><span>Direct Bank Transfer</span></label>
+  <div class="caption" *ngIf="bankTransfer">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quam,
+      adipisci mollitia consectetur vero voluptatibus. Nobis nam magni corrupti
+      omnis nihil neque sunt debitis voluptates veniam, autem culpa quaerat
+      perferendis?
+    </p>
+  </div>
+</div>
