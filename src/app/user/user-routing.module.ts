@@ -33,6 +33,18 @@ const routes: Routes = [
             (m) => m.CheckoutModule
           ),
       },
+      {
+        path: 'cart',
+        loadChildren: () =>
+          import('./account/cart/cart.module').then((m) => m.CartModule),
+      },
+      {
+        path: 'wishlist',
+        loadChildren: () =>
+          import('./account/wishlist/wishlist.module').then(
+            (m) => m.WishlistModule
+          ),
+      },
     ],
   },
 ]

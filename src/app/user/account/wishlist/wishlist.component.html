@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="d-flex justify-content-center align-items-center mt-4">
+    <mat-icon class="me-2" fontIcon="favorite"></mat-icon>
+    <h2>My Wishlist</h2>
+  </div>
+  <div>
+    <table>
+      <tr>
+        <th>Product name</th>
+        <th>Unit price</th>
+        <th>Stock status</th>
+      </tr>
+      <tr>
+        <td>
+          <div class="d-flex align-items-center">
+            <div class="box me-3">
+              <img src="{{ item.image }}" />
+            </div>
+            {{ item.title }}
+          </div>
+        </td>
+        <td>Rs.{{ item.price }}</td>
+        <td>{{ item.status }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
